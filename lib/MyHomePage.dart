@@ -3,6 +3,7 @@ import 'package:chargily_test/shared/remot/DioHelper.dart';
 import 'package:flutter/material.dart';
 
 import 'shared/api/ApiCall.dart';
+import 'shared/api/ApiCustomers.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -22,7 +23,10 @@ class _MyHomePageState extends State<MyHomePage> {
         child: ElevatedButton(
           onPressed: () {
             // Api Call
-            httpGetBalance();   
+            httpCreateCustomer(data: {
+              "name" : "islam"
+            });  
+             
           },
           child: const Text('Test Api Call'),
         ),

@@ -22,7 +22,7 @@ class HttpHelper {
 
   static Future<http.Response> postData({
     required String endpoint,
-    required Map<String, dynamic> data,
+    Map<String, dynamic>? data,
   }) async {
     final Uri uri = Uri.parse(BASE_URL + endpoint);
     final response = await http.post(
