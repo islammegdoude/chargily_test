@@ -22,7 +22,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: ElevatedButton(
           onPressed: () {
             // Api Call
-            dioGetBalance();
+            httpGetBalance();   
           },
           child: const Text('Test Api Call'),
         ),
