@@ -1,4 +1,5 @@
 
+import 'package:chargily_test/shared/api/ApiProducts.dart';
 import 'package:chargily_test/shared/remot/DioHelper.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +24,9 @@ class _MyHomePageState extends State<MyHomePage> {
         child: ElevatedButton(
           onPressed: () {
             // Api Call
-            httpDeleteCustomer(id: "01hqths3y34547e51b8jzpq1ds");
+            httpCreateProduct(data: {
+              "name": "first product"
+            });
             
           },
           child: const Text('Test Api Call'),
