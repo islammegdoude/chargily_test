@@ -13,7 +13,6 @@ class HttpHelper {
     final response = await http.get(
       uri,
       headers: <String, String>{
-        'Content-Type': 'application/json',
         'Authorization': TokenSec,
       },
     );
@@ -28,7 +27,6 @@ class HttpHelper {
     final response = await http.post(
       uri,
       headers: <String, String>{
-        'Content-Type': 'application/json',
         'Authorization': TokenSec,
       },
       body: data,
@@ -44,7 +42,6 @@ class HttpHelper {
     final response = await http.put(
       uri,
       headers: <String, String>{
-        'Content-Type': 'application/json',
         'Authorization': TokenSec,
       },
       body: data,
@@ -59,7 +56,6 @@ class HttpHelper {
     final response = await http.delete(
       uri,
       headers: <String, String>{
-        'Content-Type': 'application/json',
         'Authorization': TokenSec,
       },
     );

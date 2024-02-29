@@ -1,6 +1,3 @@
-import 'dart:convert';
-
-import 'package:chargily_test/shared/remot/DioHelper.dart';
 import 'package:chargily_test/shared/remot/HttpHelper.dart';
 
 // Creates a new customer.
@@ -12,7 +9,7 @@ void httpCreateCustomer({Map<String,dynamic>? data}){
 }
 
 // Update Customer 
-void httpUpdateCustomer({ required String id, required Map<String,dynamic> data}){
+void httpUpdateCustomer({ required String id,Map<String,dynamic>? data}){
   HttpHelper.postData(
     endpoint: '/customers/$id',
     data: data,
@@ -22,14 +19,14 @@ void httpUpdateCustomer({ required String id, required Map<String,dynamic> data}
 }
 
 // Retrieve Customer
-void httpRetrieveCustomer(String id,){
+void httpRetrieveCustomer({required String id}){
   HttpHelper.getData(endpoint: '/customers/$id').then((value) {
     print(value.body);
   });
 }
 
 // List all Customers
-void httpListAllCustomer(String id, {int? pageNmbr}){
+void httpListAllCustomer({int? pageNmbr}){
   if (pageNmbr == 0 || pageNmbr == null) {
     HttpHelper.getData(endpoint: '/customers').then((value) {
     print(value.body);
@@ -43,7 +40,7 @@ void httpListAllCustomer(String id, {int? pageNmbr}){
 
 // Delete Customer 
 
-void httpDeleteCustomer(String id,){
+void httpDeleteCustomer({required String id,}){
   HttpHelper.deleteData(endpoint: '/customers/$id').then((value) {
     print(value.body);
   });

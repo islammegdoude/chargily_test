@@ -23,10 +23,8 @@ class _MyHomePageState extends State<MyHomePage> {
         child: ElevatedButton(
           onPressed: () {
             // Api Call
-            httpCreateCustomer(data: {
-              "name" : "islam"
-            });  
-             
+            httpDeleteCustomer(id: "01hqths3y34547e51b8jzpq1ds");
+            
           },
           child: const Text('Test Api Call'),
         ),
